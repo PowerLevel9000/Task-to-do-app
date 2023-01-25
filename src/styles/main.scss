@@ -52,7 +52,7 @@ body {
         align-items: center;
         justify-content: space-between;
       }
-      
+
       .task-list:not(:last-of-type) {
         border-bottom: 1px solid gray;
       }
@@ -62,11 +62,10 @@ body {
         margin: 5px auto;
       }
 
-
-
       input {
         margin: 5px 10%;
         border: none;
+
         &:focus {
           outline: none;
         }
