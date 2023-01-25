@@ -5,14 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do-App</title>
-  <script defer src="bundled17063cfa7491f195525.js"></script>
-</head>
+  <title>
+    To-Do-App
+  </title>
+  <script src="https://kit.fontawesome.com/b89b7c8adf.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+<script defer src="bundlee84127b90ea864258089.js"></script></head>
 
 <body>
-  <div class="container">
+  <main>
+    <div class="task-shelf" id="taskShelf">
+      <div class="heading">
+        <h2>Today's Tasks</h2><i class="fa-solid fa-rotate"></i>
+      </div>
 
-  </div>
+      <input type="text" placeholder="Add new task">
+      <div class="tasks" id="tasks">
+        <div class="task-list" draggable="true">
+          <div>
+            <input type="checkbox" name="" id="task-1">
+            <label for="task-1" contenteditable="true">get out of comfort zone</label>
+          </div>
+          <span class="material-symbols-outlined">
+            drag_indicator
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

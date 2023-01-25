@@ -31,6 +31,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid gray;
       }
 
       h2 {
@@ -42,10 +43,18 @@ body {
         margin: 5px 10%;
       }
 
+      .tasks {
+        border-top: 1px solid gray;
+      }
+
       .task-list {
         display: flex;
         align-items: center;
         justify-content: space-between;
+      }
+      
+      .task-list:not(:last-of-type) {
+        border-bottom: 1px solid gray;
       }
 
       .task-list div {
@@ -53,9 +62,11 @@ body {
         margin: 5px auto;
       }
 
+
+
       input {
         margin: 5px 10%;
-
+        border: none;
         &:focus {
           outline: none;
         }
