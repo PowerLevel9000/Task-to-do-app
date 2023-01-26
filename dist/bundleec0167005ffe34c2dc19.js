@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 80vh;\n}\nbody main {\n  display: flex;\n  background-color: #fff;\n  box-shadow: 0 0 10px black;\n  max-width: 600px;\n  width: 70%;\n}\nbody main .task-shelf {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 100%;\n}\nbody main .task-shelf .heading {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 1px solid gray;\n}\nbody main .task-shelf h2 {\n  margin: 5px 10%;\n}\nbody main .task-shelf i,\nbody main .task-shelf span {\n  margin: 5px 10%;\n}\nbody main .task-shelf .tasks {\n  border-top: 1px solid gray;\n}\nbody main .task-shelf .task-list {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\nbody main .task-shelf .task-list:not(:last-of-type) {\n  border-bottom: 1px solid gray;\n}\nbody main .task-shelf .task-list div {\n  width: 70%;\n  margin: 5px auto;\n}\nbody main .task-shelf form {\n  display: flex;\n  justify-content: space-between;\n}\nbody main .task-shelf input {\n  margin: 5px 10%;\n  border: none;\n}\nbody main .task-shelf input:focus {\n  outline: none;\n}\nbody main .task-shelf label {\n  width: fit-content;\n  display: inline-block;\n}\nbody main .task-shelf label:read-write:focus {\n  outline: none;\n}\n\n/* fallback */\n@font-face {\n  font-family: \"Material Symbols Outlined\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v76/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format(\"woff2\");\n}\n.material-symbols-outlined {\n  font-family: \"Material Symbols Outlined\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  line-height: 1;\n  cursor: grab;\n  letter-spacing: normal;\n  text-transform: none;\n  display: inline-block;\n  white-space: nowrap;\n  word-wrap: normal;\n  direction: ltr;\n  -moz-font-feature-settings: \"liga\";\n  -moz-osx-font-smoothing: grayscale;\n}\n\n@media screen and (max-width: 768px) {\n  main {\n    width: 90%;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,sBAAA;AAJF;;AAOA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;AAJF;AAME;EACE,aAAA;EACA,sBAAA;EACA,0BAAA;EACA,gBAAA;EACA,UAAA;AAJJ;AAMI;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,WAAA;AAJN;AAMM;EACE,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,6BAAA;AAJR;AAOM;EACE,eAAA;AALR;AAQM;;EAEE,eAAA;AANR;AASM;EACE,0BAAA;AAPR;AAUM;EACE,aAAA;EACA,mBAAA;EACA,8BAAA;AARR;AAWM;EACE,6BAAA;AATR;AAYM;EACE,UAAA;EACA,gBAAA;AAVR;AAaM;EACE,aAAA;EACA,8BAAA;AAXR;AAcM;EACE,eAAA;EACA,YAAA;AAZR;AAcQ;EACE,aAAA;AAZV;AAgBM;EACE,kBAAA;EACA,qBAAA;AAdR;AAiBM;EACE,aAAA;AAfR;;AAqBA,aAAA;AACA;EACE,wCAAA;EACA,kBAAA;EACA,gBAAA;EACA,wMAAA;AAlBF;AAsBA;EACE,oDAAA;EACA,mBAAA;EACA,kBAAA;EACA,eAAA;EACA,cAAA;EACA,YAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;EACA,mBAAA;EACA,iBAAA;EACA,cAAA;EACA,kCAAA;EACA,kCAAA;AApBF;;AAuBA;EACE;IACE,UAAA;EApBF;AACF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  min-height: 80vh;\r\n\r\n  main {\r\n    display: flex;\r\n    background-color: #fff;\r\n    box-shadow: 0 0 10px black;\r\n    max-width: 600px;\r\n    width: 70%;\r\n\r\n    .task-shelf {\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      width: 100%;\r\n\r\n      .heading {\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: space-between;\r\n        border-bottom: 1px solid gray;\r\n      }\r\n\r\n      h2 {\r\n        margin: 5px 10%;\r\n      }\r\n\r\n      i,\r\n      span {\r\n        margin: 5px 10%;\r\n      }\r\n\r\n      .tasks {\r\n        border-top: 1px solid gray;\r\n      }\r\n\r\n      .task-list {\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: space-between;\r\n      }\r\n\r\n      .task-list:not(:last-of-type) {\r\n        border-bottom: 1px solid gray;\r\n      }\r\n\r\n      .task-list div {\r\n        width: 70%;\r\n        margin: 5px auto;\r\n      }\r\n\r\n      form {\r\n        display: flex;\r\n        justify-content: space-between;\r\n      }\r\n\r\n      input {\r\n        margin: 5px 10%;\r\n        border: none;\r\n\r\n        &:focus {\r\n          outline: none;\r\n        }\r\n      }\r\n\r\n      label {\r\n        width: fit-content;\r\n        display: inline-block;\r\n      }\r\n\r\n      label:read-write:focus {\r\n        outline: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n/* fallback */\r\n@font-face {\r\n  font-family: 'Material Symbols Outlined';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v76/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format('woff2');\r\n}\r\n\r\n//some changes\r\n.material-symbols-outlined {\r\n  font-family: 'Material Symbols Outlined', sans-serif;\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-size: 24px;\r\n  line-height: 1;\r\n  cursor: grab;\r\n  letter-spacing: normal;\r\n  text-transform: none;\r\n  display: inline-block;\r\n  white-space: nowrap;\r\n  word-wrap: normal;\r\n  direction: ltr;\r\n  -moz-font-feature-settings: 'liga';\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n  main {\r\n    width: 90%;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 80vh;\n}\nbody main {\n  display: flex;\n  background-color: #fff;\n  box-shadow: 0 0 10px black;\n  max-width: 600px;\n  width: 70%;\n}\nbody main .task-shelf {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 100%;\n}\nbody main .task-shelf .heading {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 1px solid gray;\n}\nbody main .task-shelf h2 {\n  margin: 5px 10%;\n}\nbody main .task-shelf i,\nbody main .task-shelf span {\n  margin: 5px 10%;\n}\nbody main .task-shelf .tasks {\n  border-top: 1px solid gray;\n}\nbody main .task-shelf .task-list {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\nbody main .task-shelf .task-list:not(:last-of-type) {\n  border-bottom: 1px solid gray;\n}\nbody main .task-shelf .task-list div {\n  width: 70%;\n  margin: 5px auto;\n}\nbody main .task-shelf form {\n  display: flex;\n  justify-content: space-between;\n}\nbody main .task-shelf input {\n  margin: 5px 10%;\n  border: none;\n}\nbody main .task-shelf input:focus {\n  outline: none;\n}\nbody main .task-shelf label {\n  width: fit-content;\n  display: inline-block;\n}\nbody main .task-shelf label:read-write:focus {\n  outline: none;\n}\n\n/* fallback */\n@font-face {\n  font-family: \"Material Symbols Outlined\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v76/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format(\"woff2\");\n}\n.material-symbols-outlined {\n  font-family: \"Material Symbols Outlined\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  line-height: 1;\n  cursor: grab;\n  letter-spacing: normal;\n  text-transform: none;\n  display: inline-block;\n  white-space: nowrap;\n  word-wrap: normal;\n  direction: ltr;\n  -moz-font-feature-settings: \"liga\";\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.hidden {\n  display: none;\n}\n\n.clearall {\n  height: 40px;\n  width: 100%;\n  display: flex;\n  color: #333;\n  justify-content: center;\n  align-items: center;\n  background-color: #bed2a5;\n}\n\n.clearall h2:hover {\n  color: red;\n  cursor: pointer;\n}\n\n@media screen and (max-width: 768px) {\n  main {\n    width: 90%;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,sBAAA;AAJF;;AAOA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,gBAAA;AAJF;AAME;EACE,aAAA;EACA,sBAAA;EACA,0BAAA;EACA,gBAAA;EACA,UAAA;AAJJ;AAMI;EACE,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,WAAA;AAJN;AAMM;EACE,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,6BAAA;AAJR;AAOM;EACE,eAAA;AALR;AAQM;;EAEE,eAAA;AANR;AASM;EACE,0BAAA;AAPR;AAUM;EACE,aAAA;EACA,mBAAA;EACA,8BAAA;AARR;AAWM;EACE,6BAAA;AATR;AAYM;EACE,UAAA;EACA,gBAAA;AAVR;AAaM;EACE,aAAA;EACA,8BAAA;AAXR;AAcM;EACE,eAAA;EACA,YAAA;AAZR;AAcQ;EACE,aAAA;AAZV;AAgBM;EACE,kBAAA;EACA,qBAAA;AAdR;AAiBM;EACE,aAAA;AAfR;;AAwBA,aAAA;AACA;EACE,wCAAA;EACA,kBAAA;EACA,gBAAA;EACA,wMAAA;AArBF;AAyBA;EACE,oDAAA;EACA,mBAAA;EACA,kBAAA;EACA,eAAA;EACA,cAAA;EACA,YAAA;EACA,sBAAA;EACA,oBAAA;EACA,qBAAA;EACA,mBAAA;EACA,iBAAA;EACA,cAAA;EACA,kCAAA;EACA,kCAAA;AAvBF;;AAyBA;EACE,aAAA;AAtBF;;AAyCA;EACE,YAAA;EACA,WAAA;EACA,aAAA;EACA,WAAA;EACA,uBAAA;EACA,mBAAA;EACA,yBAAA;AAtCF;;AAyCA;EACE,UAAA;EACA,eAAA;AAtCF;;AAyCA;EACE;IACE,UAAA;EAtCF;AACF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  min-height: 80vh;\r\n\r\n  main {\r\n    display: flex;\r\n    background-color: #fff;\r\n    box-shadow: 0 0 10px black;\r\n    max-width: 600px;\r\n    width: 70%;\r\n\r\n    .task-shelf {\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      width: 100%;\r\n\r\n      .heading {\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: space-between;\r\n        border-bottom: 1px solid gray;\r\n      }\r\n\r\n      h2 {\r\n        margin: 5px 10%;\r\n      }\r\n\r\n      i,\r\n      span {\r\n        margin: 5px 10%;\r\n      }\r\n\r\n      .tasks {\r\n        border-top: 1px solid gray;\r\n      }\r\n\r\n      .task-list {\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: space-between;\r\n      }\r\n\r\n      .task-list:not(:last-of-type) {\r\n        border-bottom: 1px solid gray;\r\n      }\r\n\r\n      .task-list div {\r\n        width: 70%;\r\n        margin: 5px auto;\r\n      }\r\n\r\n      form {\r\n        display: flex;\r\n        justify-content: space-between;\r\n      }\r\n\r\n      input {\r\n        margin: 5px 10%;\r\n        border: none;\r\n\r\n        &:focus {\r\n          outline: none;\r\n        }\r\n      }\r\n\r\n      label {\r\n        width: fit-content;\r\n        display: inline-block;\r\n      }\r\n\r\n      label:read-write:focus {\r\n        outline: none;\r\n      }\r\n      \r\n    }\r\n  }\r\n}\r\n\r\n\r\n\r\n/* fallback */\r\n@font-face {\r\n  font-family: 'Material Symbols Outlined';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v76/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOej.woff2) format('woff2');\r\n}\r\n\r\n//some changes\r\n.material-symbols-outlined {\r\n  font-family: 'Material Symbols Outlined', sans-serif;\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-size: 24px;\r\n  line-height: 1;\r\n  cursor: grab;\r\n  letter-spacing: normal;\r\n  text-transform: none;\r\n  display: inline-block;\r\n  white-space: nowrap;\r\n  word-wrap: normal;\r\n  direction: ltr;\r\n  -moz-font-feature-settings: 'liga';\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n.hidden {\r\n  display: none;\r\n}\r\n\r\n// .start{\r\n//   background-color:#EDEADE ;\r\n// }\r\n\r\n// .enter {\r\n//   background-color: #ffe5b4;\r\n// }\r\n\r\n// .over{\r\n//   background-color: #eedc82;\r\n// }\r\n\r\n// // .drop {\r\n\r\n// // }\r\n\r\n.clearall {\r\n  height: 40px;\r\n  width: 100%;\r\n  display: flex;\r\n  color: #333;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #bed2a5;\r\n}\r\n\r\n.clearall h2:hover {\r\n  color: red;\r\n  cursor: pointer;\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n  main {\r\n    width: 90%;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -591,25 +591,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 
 
-console.log(hello());
-
-const dataBase = [
+const dataBaseDefault = [
   {
-    checked: true,
+    check: true,
     task: 'stop Procrastination',
     id: new Date('December 17, 1995 03:24:00'),
   },
   {
-    checked: false,
+    check: false,
     task: 'stop Procrastination',
     id: new Date('December 17, 1995 03:24:00'),
   },
   {
-    checked: true,
+    check: true,
     task: 'stop Procrastination',
     id: new Date('December 17, 1995 03:24:00'),
   },
 ];
+
+const dataBase = JSON.parse(localStorage.getItem('dataBase')) || dataBaseDefault;
 
 const form = document.getElementById('formId');
 const taskGen = document.getElementById('taskGen');
@@ -618,46 +618,80 @@ const tasks = document.getElementById('tasks');
 const htmlGenerator = () => {
   tasks.innerHTML = '';
   dataBase.forEach((element) => {
-    if (element.checked) {
+    if (element.check) {
       tasks.innerHTML += `
         <div class="task-list" draggable="true">
           <div>
-            <input type="checkbox" name="" id="${element.id}" checked>
-            <label for="${element.id}" contenteditable="true">${element.task}</label>
+            <input class="checkbox" type="checkbox" name="" id="${element.id}" checked>
+            <label contenteditable="true">${element.task}</label>
           </div>
           <span class="material-symbols-outlined">
             drag_indicator
           </span>
+          <i class="fa-solid fa-trash-can hidden"></i>
         </div>
     `;
     } else {
       tasks.innerHTML += `
         <div class="task-list" draggable="true">
           <div>
-            <input type="checkbox" name="" id="task-1">
-            <label for="task-1" contenteditable="true">${element.task}</label>
+            <input class="checkbox" type="checkbox" name="" id="${element.id}">
+            <label contenteditable="true">${element.task}</label>
           </div>
           <span class="material-symbols-outlined">
             drag_indicator
           </span>
+          <i class="fa-solid fa-trash-can hidden"></i>
         </div>
     `;
     }
   });
 };
 htmlGenerator();
-function submitForm(event) {
-  // Preventing page refresh
-  event.preventDefault();
-  dataBase.push({ checked: false, task: `${taskGen.value}`, id: new Date() });
-  htmlGenerator();
+
+function submitForm() {
+  dataBase.push({ check: false, task: `${taskGen.value}`, id: new Date() });
+  localStorage.setItem('dataBase', JSON.stringify(dataBase));
   taskGen.value = '';
-  return false;
 }
+
 form.addEventListener('submit', submitForm);
-// draggable and other functionalities
+
+const editAble = document.querySelectorAll('.task-list')
+const dragBTn = document.querySelectorAll('.material-symbols-outlined')
+const trash = document.querySelectorAll('.fa-trash-can')
+const checkbox = document.querySelectorAll('.checkbox')
+
+for (let i = 0; i < editAble.length; i++) {
+  editAble[i].addEventListener('mouseover', ()=>{
+    dragBTn[i].classList.toggle('hidden');
+    trash[i].classList.toggle('hidden')
+  });
+
+  editAble[i].addEventListener('mouseout', ()=>{
+    dragBTn[i].classList.toggle('hidden');
+    trash[i].classList.toggle('hidden');
+  });
+
+  trash[i].addEventListener('click', ()=>{
+    dataBase.splice(i,1);
+    localStorage.setItem('dataBase', JSON.stringify(dataBase));
+    window.location.reload()
+  })
+
+  checkbox[i].addEventListener('input',()=>{
+    if(dataBase[i].check===false) {
+      dataBase[i].check=true
+      localStorage.setItem('dataBase', JSON.stringify(dataBase));
+    }else if(dataBase[i].check===true){
+      dataBase[i].check = false
+      localStorage.setItem('dataBase', JSON.stringify(dataBase));
+    }
+  })
+}
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle158e61bfab20ae094e3f.js.map
+//# sourceMappingURL=bundleec0167005ffe34c2dc19.js.map
