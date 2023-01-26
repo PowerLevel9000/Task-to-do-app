@@ -84,9 +84,12 @@ body {
       label:read-write:focus {
         outline: none;
       }
+      
     }
   }
 }
+
+
 
 /* fallback */
 @font-face {
@@ -112,6 +115,40 @@ body {
   direction: ltr;
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
+}
+.hidden {
+  display: none;
+}
+
+// .start{
+//   background-color:#EDEADE ;
+// }
+
+// .enter {
+//   background-color: #ffe5b4;
+// }
+
+// .over{
+//   background-color: #eedc82;
+// }
+
+// // .drop {
+
+// // }
+
+.clearall {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  color: #333;
+  justify-content: center;
+  align-items: center;
+  background-color: #bed2a5;
+}
+
+.clearall h2:hover {
+  color: red;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
