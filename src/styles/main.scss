@@ -84,12 +84,9 @@ body {
       label:read-write:focus {
         outline: none;
       }
-      
     }
   }
 }
-
-
 
 /* fallback */
 @font-face {
@@ -116,6 +113,7 @@ body {
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
 }
+
 .hidden {
   display: none;
 }

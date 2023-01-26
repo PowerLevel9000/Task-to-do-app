@@ -66,35 +66,35 @@ function submitForm() {
 
 form.addEventListener('submit', submitForm);
 
-const editAble = document.querySelectorAll('.task-list')
-const dragBTn = document.querySelectorAll('.material-symbols-outlined')
-const trash = document.querySelectorAll('.fa-trash-can')
-const checkbox = document.querySelectorAll('.checkbox')
+const editAble = document.querySelectorAll('.task-list');
+const dragBTn = document.querySelectorAll('.material-symbols-outlined');
+const trash = document.querySelectorAll('.fa-trash-can');
+const checkbox = document.querySelectorAll('.checkbox');
 
-for (let i = 0; i < editAble.length; i++) {
-  editAble[i].addEventListener('mouseover', ()=>{
-    dragBTn[i].classList.toggle('hidden');
-    trash[i].classList.toggle('hidden')
-  });
-
-  editAble[i].addEventListener('mouseout', ()=>{
+for (let i = 0; i < editAble.length; i += 1) {
+  editAble[i].addEventListener('mouseover', () => {
     dragBTn[i].classList.toggle('hidden');
     trash[i].classList.toggle('hidden');
   });
 
-  trash[i].addEventListener('click', ()=>{
-    dataBase.splice(i,1);
-    localStorage.setItem('dataBase', JSON.stringify(dataBase));
-    window.location.reload()
-  })
+  editAble[i].addEventListener('mouseout', () => {
+    dragBTn[i].classList.toggle('hidden');
+    trash[i].classList.toggle('hidden');
+  });
 
-  checkbox[i].addEventListener('input',()=>{
-    if(dataBase[i].check===false) {
-      dataBase[i].check=true
+  trash[i].addEventListener('click', () => {
+    dataBase.splice(i, 1);
+    localStorage.setItem('dataBase', JSON.stringify(dataBase));
+    window.location.reload();
+  });
+
+  checkbox[i].addEventListener('input', () => {
+    if (dataBase[i].check === false) {
+      dataBase[i].check = true;
       localStorage.setItem('dataBase', JSON.stringify(dataBase));
-    }else if(dataBase[i].check===true){
-      dataBase[i].check = false
+    } else if (dataBase[i].check === true) {
+      dataBase[i].check = false;
       localStorage.setItem('dataBase', JSON.stringify(dataBase));
     }
-  })
+  });
 }
