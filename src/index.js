@@ -1,7 +1,5 @@
 import './styles/main.scss';
 
-console.log(hello());
-
 const dataBase = [
   {
     checked: true,
