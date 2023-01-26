@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 <!-- the change -->
 <div align="center">
-  <!-- <img src="./media/dilsher-logo.png" alt="logo" width="140"  height="auto" /> -->
   <img src="./media/media/my-logo.png" alt="logo" width="140"  height="auto" />
   <br/><br>
   <h1><b>To do App</b></h1>
@@ -9,21 +8,10 @@
   <br><br>
   
  </div>
-<!-- <h2>Main Page <b>Desktop View<b><br><br></h2> -->
-<div align="center">
-  <img src="./media/media/To-Do-initial.png" alt="logo" width="100%"  height="auto" />
-</div>
-<!-- <h2>About Page <b>Desktop View<b><br><br></h2>
-<div align="center">
-  <img src="./media/about-desktop-page.png" alt="logo" width="100%"  height="auto" />
-</div>
 
-<!-- <div>
-  <h2>About Page <b>Mobile View<b><br><br></h2>
-  <img src="./media/mobile-page.png" alt="logo"  />
-  <h2>About Page <b>Mobile View<b><br><br></h2>
-  <img src="./media/about-mobile-page.png" alt="logo"  />
-</div> --> -->
+<div align="center">
+  <img src="./media/media/todo.png" alt="logo" width="100%"  height="auto" />
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -51,11 +39,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Books <a name="about-project"></a>
+# 📖 Task-To-do <a name="about-project"></a>
 
 > This Project for individual purpose it organize someone's task to do
 
-**Awesome Books** is just a javascript based simple project
+**Task-To-do** is just a javascript based simple project
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -110,7 +98,7 @@
 > This link will guide you to my project
 
 - [Live Demo Link](https://powerlevel9000.github.io/Task-to-do-app/dist/)
-<!-- - [Loom Video](https://www.loom.com/share/263ca564cb634bcca4b48ad1ea9870b7) -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,11 +164,6 @@ You can deploy this project using:
 - Twitter: [@PowerLevel9002](https://twitter.com/PowerLevel9002?t=AIuSN7mTxk5a_MWpLolEjA&s=09)
 - LinkedIn: [@Adarsh Pathak](https://www.linkedin.com/in/adarsh-pathak-56a831256/)
 
-<!-- 👤 **Dilsher Balouch**
-
-- GitHub: [@DilsherB](https://github.com/DilsherB)
-- Twitter: [@_brilliantMindz](https://twitter.com/_brilliantMindz)
-- LinkedIn: [@_brilliantMindz](https://www.linkedin.com/in/brilliantmindz/) -->
 
 
 <!-- FUTURE FEATURES -->

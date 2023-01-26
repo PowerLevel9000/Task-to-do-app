@@ -506,21 +506,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/hello.js":
-/*!**********************!*\
-  !*** ./src/hello.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const hello = () => "i don't trust you because you aren't javaScript";
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (hello);
-
 /***/ })
 
 /******/ 	});
@@ -603,12 +588,10 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hello_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello.js */ "./src/hello.js");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 
 
-
-console.log((0,_hello_js__WEBPACK_IMPORTED_MODULE_0__["default"])());
+console.log(hello());
 
 const dataBase = [
   {
@@ -677,4 +660,4 @@ form.addEventListener('submit', submitForm);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle578dadbb05d9d8438bee.js.map
+//# sourceMappingURL=bundle158e61bfab20ae094e3f.js.map
