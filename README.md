@@ -1,37 +1,16 @@
 <a name="readme-top"></a>
+<!-- the change -->
+<div align="center">
+  <img src="./media/media/my-logo.png" alt="logo" width="140"  height="auto" />
+  <br/><br>
+  <h1><b>To do App</b></h1>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
+  <br><br>
+  
+ </div>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
+  <img src="./media/media/todo.png" alt="logo" width="100%"  height="auto" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -55,53 +34,60 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Task-To-do <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> This Project for individual purpose it organize someone's task to do
 
-**[your_project__name]** is a...
+**Task-To-do** is just a javascript based simple project
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> In this project I used many skills, tech and libraries
 
 <details>
-  <summary>Client</summary>
+  <summary>Documentation</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://html.com">HTML</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Styling</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.w3.org">CSS</a></li>
   </ul>
 </details>
 
 <details>
-<summary>Database</summary>
+<summary>Dynamics And Logics</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://michalsnik.github.io/aos/">JavaScript</a></li>
   </ul>
 </details>
+
+<!-- <details> -->
+<!-- <summary>Animation</summary>
+  <ul>
+    <li><a href="https://michalsnik.github.io/aos/">Aos.js</a></li>
+  </ul>
+</details> -->
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> Following features you should observe
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **You can add your todays tasks**
+- **yoc can checked the completed tasks**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,9 +95,10 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> This link will guide you to my project
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://powerlevel9000.github.io/Task-to-do-app/dist/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,83 +106,50 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+>For having local file and project you can fork this repo 
 
-To get a local copy up and running, follow these steps.
+>And for making changes you you should follow prerequisites
+
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to edit this project you need:
 
-<!--
-Example command:
+ - Any text editor such as note pad and word pad
+ - A web browser
 
-```sh
- gem install rails
-```
- -->
+#### suggested 
+ - visual studio code
+ - atom 
+ - visual code 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+ - click on index.html
+ - open in the browser
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
 
 ### Usage
 
-To run the project, execute the following command:
+ Execute the following thing:
+ 
+ - See project buttons
+ - Navigation bar on desktop version
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+- Check whether your fav book added 
+- Check your mood swings works 🧑‍🏫😁 according to my project
+ 
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
-
-```sh
-
-```
- -->
+- for this repo and use git hub pages to deploy it 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,21 +157,14 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Adarsh Pathak**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@PowerLevel9000](https://github.com/githubhandle)
+- Twitter: [@PowerLevel9002](https://twitter.com/PowerLevel9002?t=AIuSN7mTxk5a_MWpLolEjA&s=09)
+- LinkedIn: [@Adarsh Pathak](https://www.linkedin.com/in/adarsh-pathak-56a831256/)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
@@ -225,9 +172,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Add navigation bar**
+- [ ] **improve functionality**
+- [ ] **improve styling**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -237,7 +184,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/PowerLevel9000/Task-to-do-app/issues)).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,27 +192,24 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
-If you like this project...
+
+If you like my Project give it a Star ✨🌟 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+> ask questions to be here 
 
 - **[Question_1]**
 
@@ -281,7 +225,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/PowerLevel9000/Task-to-do-app/blob/devlopment/LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
