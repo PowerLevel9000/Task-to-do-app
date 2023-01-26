@@ -1,24 +1,6 @@
 import './styles/main.scss';
 
-const dataBaseDefault = [
-  {
-    check: true,
-    task: 'stop Procrastination',
-    id: new Date('December 17, 1995 03:24:00'),
-  },
-  {
-    check: false,
-    task: 'stop Procrastination',
-    id: new Date('December 17, 1995 03:24:00'),
-  },
-  {
-    check: true,
-    task: 'stop Procrastination',
-    id: new Date('December 17, 1995 03:24:00'),
-  },
-];
-
-const dataBase = JSON.parse(localStorage.getItem('dataBase')) || dataBaseDefault;
+const dataBase = JSON.parse(localStorage.getItem('dataBase')) || [];
 
 const form = document.getElementById('formId');
 const taskGen = document.getElementById('taskGen');
@@ -59,7 +41,7 @@ const htmlGenerator = () => {
 htmlGenerator();
 
 function submitForm() {
-  dataBase.push({ check: false, task: `${taskGen.value}`, id: new Date() });
+  dataBase.push({ check: false, task: `${taskGen.value}`, id: dataBase.length });
   localStorage.setItem('dataBase', JSON.stringify(dataBase));
   taskGen.value = '';
 }
