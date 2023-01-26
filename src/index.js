@@ -65,3 +65,4 @@ function submitForm(event) {
   return false;
 }
 form.addEventListener('submit', submitForm);
+// draggable and other functionalities
