@@ -55,13 +55,13 @@ const checkbox = document.querySelectorAll('.checkbox');
 
 for (let i = 0; i < editAble.length; i += 1) {
   editAble[i].addEventListener('mouseover', () => {
-    dragBTn[i].classList.toggle('hidden');
-    trash[i].classList.toggle('hidden');
+    dragBTn[i].classList.add('hidden');
+    trash[i].classList.remove('hidden');
   });
 
   editAble[i].addEventListener('mouseout', () => {
-    dragBTn[i].classList.toggle('hidden');
-    trash[i].classList.toggle('hidden');
+    dragBTn[i].classList.remove('hidden');
+    trash[i].classList.add('hidden');
   });
 
   trash[i].addEventListener('click', () => {
@@ -80,3 +80,12 @@ for (let i = 0; i < editAble.length; i += 1) {
     }
   });
 }
+
+const clear = () => {
+  const filteredBase = dataBase.filter((c) => c.check === false);
+  localStorage.setItem('dataBase', JSON.stringify(filteredBase));
+  window.location.reload();
+};
+
+const clearBtn = document.getElementById('clearAll');
+clearBtn.addEventListener('click', clear);
