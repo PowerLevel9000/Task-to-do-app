@@ -41,6 +41,7 @@ const htmlGenerator = () => {
 htmlGenerator();
 
 function submitForm() {
+  if (taskGen.value.trim() === '') return;
   dataBase.push({ check: false, task: `${taskGen.value}`, id: dataBase.length });
   localStorage.setItem('dataBase', JSON.stringify(dataBase));
   taskGen.value = '';
@@ -89,3 +90,8 @@ const clear = () => {
 
 const clearBtn = document.getElementById('clearAll');
 clearBtn.addEventListener('click', clear);
+
+const refresh = document.querySelector('.fa-rotate');
+refresh.addEventListener('click', () => {
+  window.location.reload();
+});
