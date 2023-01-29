@@ -3,6 +3,8 @@
 $primary-color: #2fa8cc;
 $secondary-color: #f4f4f4;
 $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+$small: 300px;
+$medium: 900px;
 
 * {
   box-sizing: border-box;
@@ -32,6 +34,11 @@ body {
     box-shadow: 0 0 10px black;
     max-width: 600px;
     width: 70%;
+
+    @media screen and (min-width: $small) and (max-width: $medium) {
+      width: 99%;
+      //css code
+    }
 
     .task-shelf {
       display: flex;
