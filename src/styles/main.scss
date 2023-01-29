@@ -52,7 +52,7 @@ body {
 
       i,
       span {
-        margin: 5px 10%;
+        margin: 5px 10% 5px 0;
       }
 
       .tasks {
@@ -70,8 +70,10 @@ body {
       }
 
       .task-list div {
-        width: 70%;
-        margin: 5px auto;
+        width: 85%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
       }
 
       form {
@@ -79,18 +81,28 @@ body {
         justify-content: space-between;
       }
 
+      input[type="submit"] {
+        margin: 5px 10% 5px 0;
+      }
+
       input {
-        margin: 5px 10%;
+        margin: 5px 0 5px 10%;
         border: none;
+        height: 24px;
+        // width: 95%;
 
         &:focus {
           outline: none;
         }
       }
 
+      #taskGen {
+        width: 100%;
+      }
+
       label {
-        width: fit-content;
-        display: inline-block;
+        width: 85%;
+        flex-wrap: wrap;
       }
 
       label:read-write:focus {
@@ -98,6 +110,10 @@ body {
       }
     }
   }
+}
+
+.strike {
+  text-decoration: line-through;
 }
 
 /* fallback */

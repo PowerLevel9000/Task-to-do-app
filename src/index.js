@@ -17,7 +17,7 @@ const htmlGenerator = () => {
         <div class="task-list" draggable="true">
           <div>
             <input class="checkbox" type="checkbox" name="" id="${element.id}" checked>
-            <label contenteditable="true">${element.task}</label> 
+            <label class="list strike" contenteditable="true">${element.task}</label> 
           </div>
           <span class="material-symbols-outlined">
             drag_indicator
@@ -28,9 +28,9 @@ const htmlGenerator = () => {
     } else {
       tasks.innerHTML += `
         <div class="task-list" draggable="true">
-          <div>
+          <div class='task-box'>
             <input class="checkbox" type="checkbox" name="" id="${element.id}">
-            <label contenteditable="true">${element.task}</label>
+            <label class="list" contenteditable="true">${element.task}</label>
           </div>
           <span class="material-symbols-outlined">
             drag_indicator
@@ -57,6 +57,8 @@ const editAble = document.querySelectorAll('.task-list');
 const dragBTn = document.querySelectorAll('.material-symbols-outlined');
 const trash = document.querySelectorAll('.fa-trash-can');
 const checkbox = document.querySelectorAll('.checkbox');
+const strike = document.querySelectorAll('label');
+// console.log(strike)
 
 for (let i = 0; i < editAble.length; i += 1) {
   editAble[i].addEventListener('mouseover', () => {
@@ -78,17 +80,23 @@ for (let i = 0; i < editAble.length; i += 1) {
   checkbox[i].addEventListener('input', () => {
     if (dataBase[i].check === false) {
       dataBase[i].check = true;
+      strike[i].classList.add('strike');
       localStorage.setItem('dataBase', JSON.stringify(dataBase));
     } else if (dataBase[i].check === true) {
       dataBase[i].check = false;
+      strike[i].classList.remove('strike');
       localStorage.setItem('dataBase', JSON.stringify(dataBase));
     }
+  });
+
+  strike[i].addEventListener('input', () => {
+    dataBase[i].task = strike[i].innerText;
+    localStorage.setItem('dataBase', JSON.stringify(dataBase));
   });
 }
 
 const clearBtn = document.getElementById('clearAll');
 clearBtn.addEventListener('click', clear);
-
 const refresh = document.querySelector('.fa-rotate');
 refresh.addEventListener('click', () => {
   window.location.reload();
