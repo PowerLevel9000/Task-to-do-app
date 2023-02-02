@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
@@ -8,6 +7,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -35,6 +35,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\n.
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -129,6 +130,7 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -148,12 +150,107 @@ module.exports = function (item) {
 
 /***/ }),
 
+/***/ "./node_modules/localstorage-memory/lib/localstorage-memory.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/localstorage-memory/lib/localstorage-memory.js ***!
+  \*********************************************************************/
+/***/ (function(module) {
+
+(function (root) {
+  var localStorageMemory = {}
+  var cache = {}
+
+  /**
+   * number of stored items.
+   */
+  localStorageMemory.length = 0
+
+  /**
+   * returns item for passed key, or null
+   *
+   * @para {String} key
+   *       name of item to be returned
+   * @returns {String|null}
+   */
+  localStorageMemory.getItem = function (key) {
+    if (key in cache) {
+      return cache[key]
+    }
+
+    return null
+  }
+
+  /**
+   * sets item for key to passed value, as String
+   *
+   * @para {String} key
+   *       name of item to be set
+   * @para {String} value
+   *       value, will always be turned into a String
+   * @returns {undefined}
+   */
+  localStorageMemory.setItem = function (key, value) {
+    if (typeof value === 'undefined') {
+      localStorageMemory.removeItem(key)
+    } else {
+      if (!(cache.hasOwnProperty(key))) {
+        localStorageMemory.length++
+      }
+
+      cache[key] = '' + value
+    }
+  }
+
+  /**
+   * removes item for passed key
+   *
+   * @para {String} key
+   *       name of item to be removed
+   * @returns {undefined}
+   */
+  localStorageMemory.removeItem = function (key) {
+    if (cache.hasOwnProperty(key)) {
+      delete cache[key]
+      localStorageMemory.length--
+    }
+  }
+
+  /**
+   * returns name of key at passed index
+   *
+   * @para {Number} index
+   *       Position for key to be returned (starts at 0)
+   * @returns {String|null}
+   */
+  localStorageMemory.key = function (index) {
+    return Object.keys(cache)[index] || null
+  }
+
+  /**
+   * removes all stored items and sets length to 0
+   *
+   * @returns {undefined}
+   */
+  localStorageMemory.clear = function () {
+    cache = {}
+    localStorageMemory.length = 0
+  }
+
+  if (true) {
+    module.exports = localStorageMemory
+  } else {}
+})(this)
+
+
+/***/ }),
+
 /***/ "./src/styles/main.scss":
 /*!******************************!*\
   !*** ./src/styles/main.scss ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -208,6 +305,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -321,6 +419,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -369,6 +468,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -389,6 +489,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -410,6 +511,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -489,6 +591,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -508,122 +611,18 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/index.js":
+/***/ "./src/local.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/local.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _status_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./status.js */ "./src/status.js");
+const localStorageMemory = __webpack_require__(/*! localstorage-memory */ "./node_modules/localstorage-memory/lib/localstorage-memory.js");
 
- // eslint-disable-line
-
+__webpack_require__.g.localStorage = localStorageMemory;
 const dataBase = JSON.parse(localStorage.getItem('dataBase')) || [];
 
-const form = document.getElementById('formId');
-const taskGen = document.getElementById('taskGen');
-
-const tasks = document.getElementById('tasks');
-const htmlGenerator = () => {
-  tasks.innerHTML = '';
-  dataBase.forEach((element) => {
-    if (element.check) {
-      //  I should use input instead of contenteditable so that i can have all js event
-      //  for input such as onfocus
-      tasks.innerHTML += `
-        <div class="task-list" draggable="true">
-          <div>
-            <input class="checkbox" type="checkbox" name="" id="${element.id}" checked>
-            <label class="list strike" contenteditable="true">${element.task}</label> 
-          </div>
-          <span class="material-symbols-outlined">
-            drag_indicator
-          </span>
-          <i class="fa-solid fa-trash-can hidden"></i>
-        </div>
-    `;
-    } else {
-      tasks.innerHTML += `
-        <div class="task-list" draggable="true">
-          <div class='task-box'>
-            <input class="checkbox" type="checkbox" name="" id="${element.id}">
-            <label class="list" contenteditable="true">${element.task}</label>
-          </div>
-          <span class="material-symbols-outlined">
-            drag_indicator
-          </span>
-          <i class="fa-solid fa-trash-can hidden"></i>
-        </div>
-    `;
-    }
-  });
-};
-htmlGenerator();
-
-//  i could make a task class with methods in it for more clarity  in code
-function submitForm() {
-  if (taskGen.value.trim() === '') return;
-  dataBase.push({ check: false, task: `${taskGen.value}`, id: dataBase.length });
-  localStorage.setItem('dataBase', JSON.stringify(dataBase));
-  taskGen.value = '';
-}
-
-form.addEventListener('submit', submitForm);
-
-const editAble = document.querySelectorAll('.task-list');
-const dragBTn = document.querySelectorAll('.material-symbols-outlined');
-const trash = document.querySelectorAll('.fa-trash-can');
-const checkbox = document.querySelectorAll('.checkbox');
-const strike = document.querySelectorAll('label');
-// console.log(strike)
-
-for (let i = 0; i < editAble.length; i += 1) {
-  editAble[i].addEventListener('mouseover', () => {
-    dragBTn[i].classList.add('hidden');
-    trash[i].classList.remove('hidden');
-  });
-
-  editAble[i].addEventListener('mouseout', () => {
-    dragBTn[i].classList.remove('hidden');
-    trash[i].classList.add('hidden');
-  });
-
-  trash[i].addEventListener('click', () => {
-    dataBase.splice(i, 1);
-    localStorage.setItem('dataBase', JSON.stringify(dataBase));
-    window.location.reload();
-  });
-
-  checkbox[i].addEventListener('input', () => {
-    if (dataBase[i].check === false) {
-      dataBase[i].check = true;
-      strike[i].classList.add('strike');
-      localStorage.setItem('dataBase', JSON.stringify(dataBase));
-    } else if (dataBase[i].check === true) {
-      dataBase[i].check = false;
-      strike[i].classList.remove('strike');
-      localStorage.setItem('dataBase', JSON.stringify(dataBase));
-    }
-  });
-
-  strike[i].addEventListener('input', () => {
-    dataBase[i].task = strike[i].innerText;
-    localStorage.setItem('dataBase', JSON.stringify(dataBase));
-  });
-}
-
-const clearBtn = document.getElementById('clearAll');
-clearBtn.addEventListener('click', _status_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
-const refresh = document.querySelector('.fa-rotate');
-refresh.addEventListener('click', () => {
-  window.location.reload();
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataBase);
+module.exports = dataBase;
 
 
 /***/ }),
@@ -634,19 +633,39 @@ refresh.addEventListener('click', () => {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./src/index.js");
- // eslint-disable-line
+const dataBase = __webpack_require__(/*! ./local */ "./src/local.js")// eslint-disable-line
 
 const clear = () => {
-  const filteredBase = _index_js__WEBPACK_IMPORTED_MODULE_0__["default"].filter((c) => c.check === false);
+  const filteredBase = dataBase.filter((c) => c.check === false);
   localStorage.setItem('dataBase', JSON.stringify(filteredBase));
   window.location.reload();
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clear);
+
+/***/ }),
+
+/***/ "./src/submit.js":
+/*!***********************!*\
+  !*** ./src/submit.js ***!
+  \***********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+const dataBase = __webpack_require__(/*! ./local.js */ "./src/local.js");
+
+const submitForm = () => {
+  const taskGen = document.getElementById('taskGen');
+  if (taskGen.value.trim() === '') return;
+  dataBase.push({ check: false, task: `${taskGen.value}`, id: dataBase.length + 1 });
+  localStorage.setItem('dataBase', JSON.stringify(dataBase));
+  taskGen.value = '';
+};
+
+module.exports = submitForm;
 
 /***/ })
 
@@ -670,7 +689,7 @@ const clear = () => {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -701,6 +720,18 @@ const clear = () => {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -723,12 +754,120 @@ const clear = () => {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _status_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./status.js */ "./src/status.js");
+
+
+const submitForm = __webpack_require__(/*! ./submit.js */ "./src/submit.js");
+// const remove = require('./remove.js');
+const dataBase = __webpack_require__(/*! ./local.js */ "./src/local.js");
+
+ // eslint-disable-line
+
+const form = document.getElementById('formId');
+
+const tasks = document.getElementById('tasks');
+const htmlGenerator = () => {
+  tasks.innerHTML = '';
+  dataBase.forEach((element) => {
+    if (element.check) {
+      tasks.innerHTML += `
+        <div class="task-list" draggable="true">
+          <div>
+            <input class="checkbox" type="checkbox" name="" id="${element.id}" checked>
+            <label class="list strike" contenteditable="true">${element.task}</label> 
+          </div>
+          <span class="material-symbols-outlined">
+            drag_indicator
+          </span>
+          <i class="fa-solid fa-trash-can hidden"></i>
+        </div>
+    `;
+    } else {
+      tasks.innerHTML += `
+        <div class="task-list" draggable="true">
+          <div class='task-box'>
+            <input class="checkbox" type="checkbox" name="" id="${element.id}">
+            <label class="list" contenteditable="true">${element.task}</label>
+          </div>
+          <span class="material-symbols-outlined">
+            drag_indicator
+          </span>
+          <i class="fa-solid fa-trash-can hidden"></i>
+        </div>
+    `;
+    }
+  });
+};
+htmlGenerator();
+
+form.addEventListener('submit', submitForm);
+
+const editAble = document.querySelectorAll('.task-list');
+const dragBTn = document.querySelectorAll('.material-symbols-outlined');
+const trash = document.querySelectorAll('.fa-trash-can');
+const checkbox = document.querySelectorAll('.checkbox');
+const strike = document.querySelectorAll('label');
+const complexFunctionality = () => {
+  for (let i = 0; i < editAble.length; i += 1) {
+    editAble[i].addEventListener('mouseover', () => {
+      dragBTn[i].classList.add('hidden');
+      trash[i].classList.remove('hidden');
+    });
+
+    editAble[i].addEventListener('mouseout', () => {
+      dragBTn[i].classList.remove('hidden');
+      trash[i].classList.add('hidden');
+    });
+
+    // trash[i].addEventListener('click', remove);
+
+    trash[i].addEventListener('click', () => {
+      dataBase.splice(i, 1);
+      localStorage.setItem('dataBase', JSON.stringify(dataBase));
+      window.location.reload();
+    });
+
+    checkbox[i].addEventListener('input', () => {
+      if (dataBase[i].check === false) {
+        dataBase[i].check = true;
+        strike[i].classList.add('strike');
+        localStorage.setItem('dataBase', JSON.stringify(dataBase));
+      } else if (dataBase[i].check === true) {
+        dataBase[i].check = false;
+        strike[i].classList.remove('strike');
+        localStorage.setItem('dataBase', JSON.stringify(dataBase));
+      }
+    });
+
+    strike[i].addEventListener('input', () => {
+      dataBase[i].task = strike[i].innerText;
+      localStorage.setItem('dataBase', JSON.stringify(dataBase));
+    });
+  }
+}
+
+complexFunctionality()
+
+
+const clearBtn = document.getElementById('clearAll');
+clearBtn.addEventListener('click', _status_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+const refresh = document.querySelector('.fa-rotate');
+refresh.addEventListener('click', () => {
+  window.location.reload();
+});
+// export default dataBase;
+
+})();
+
 /******/ })()
 ;
-//# sourceMappingURL=bundle9d648f3a38a96d05467a.js.map
+//# sourceMappingURL=bundle7d3b59341246501c095d.js.map
