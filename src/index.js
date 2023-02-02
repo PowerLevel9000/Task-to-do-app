@@ -87,10 +87,9 @@ const complexFunctionality = () => {
       localStorage.setItem('dataBase', JSON.stringify(dataBase));
     });
   }
-}
+};
 
-complexFunctionality()
-
+complexFunctionality();
 
 const clearBtn = document.getElementById('clearAll');
 clearBtn.addEventListener('click', clear);
