@@ -28,4 +28,14 @@ describe('submitForm functionality', () => {
     expect(dataBase.length).toBe(4);
     expect(dataBase[3]).toEqual({ check: false, task: 'stop Procrastination', id: 4 });
   });
+  it('add another task "you are suck why this much testing three is enough"', () => {
+    submitForm();
+    expect(dataBase.length).toBe(5);
+    expect(dataBase[4]).toEqual({ check: false, task: 'stop Procrastination', id: 5 });
+  });
+  it('add another task "you are suck why this much testing three is enough"', () => {
+    submitForm();
+    expect(dataBase.length).toBe(6);
+    expect(dataBase[5]).toEqual({ check: false, task: 'stop Procrastination', id: 6 });
+  });
 });
