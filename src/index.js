@@ -1,10 +1,11 @@
 import './styles/main.scss';
+const submitForm = require('./submit')
 import clear from './status.js'; // eslint-disable-line
 
 const dataBase = JSON.parse(localStorage.getItem('dataBase')) || [];
 
 const form = document.getElementById('formId');
-const taskGen = document.getElementById('taskGen');
+
 
 const tasks = document.getElementById('tasks');
 const htmlGenerator = () => {
@@ -44,12 +45,12 @@ const htmlGenerator = () => {
 htmlGenerator();
 
 //  i could make a task class with methods in it for more clarity  in code
-function submitForm() {
-  if (taskGen.value.trim() === '') return;
-  dataBase.push({ check: false, task: `${taskGen.value}`, id: dataBase.length });
-  localStorage.setItem('dataBase', JSON.stringify(dataBase));
-  taskGen.value = '';
-}
+// function submitForm() {
+//   if (taskGen.value.trim() === '') return;
+//   dataBase.push({ check: false, task: `${taskGen.value}`, id: dataBase.length });
+//   localStorage.setItem('dataBase', JSON.stringify(dataBase));
+//   taskGen.value = '';
+// }
 
 form.addEventListener('submit', submitForm);
 
