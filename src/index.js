@@ -1,11 +1,12 @@
 import './styles/main.scss';
-const submitForm = require('./submit')
+
+const submitForm = require('./submit.js');
+
 import clear from './status.js'; // eslint-disable-line
 
 const dataBase = JSON.parse(localStorage.getItem('dataBase')) || [];
 
 const form = document.getElementById('formId');
-
 
 const tasks = document.getElementById('tasks');
 const htmlGenerator = () => {

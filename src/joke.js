@@ -1,3 +1,3 @@
-const joke = ()=>`i don't trust stairs because they are always upto something`;
+const joke = () => 'i don\'t trust stairs because they are always upto something';
 
-module.exports = joke
+module.exports = joke;
