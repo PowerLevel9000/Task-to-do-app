@@ -611,6 +611,82 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/complex.js":
+/*!************************!*\
+  !*** ./src/complex.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "completibilty": () => (/* binding */ completibilty),
+/* harmony export */   "complexFunctionality": () => (/* binding */ complexFunctionality),
+/* harmony export */   "hideTrash": () => (/* binding */ hideTrash),
+/* harmony export */   "removeTask": () => (/* binding */ removeTask),
+/* harmony export */   "showTrash": () => (/* binding */ showTrash),
+/* harmony export */   "valueUpdate": () => (/* binding */ valueUpdate)
+/* harmony export */ });
+const dataBase = __webpack_require__(/*! ./local.js */ "./src/local.js");
+
+const showTrash = (i) => {
+  const dragBTn = document.querySelectorAll('.material-symbols-outlined');
+  const trash = document.querySelectorAll('.fa-trash-can');
+  dragBTn[i].classList.add('hidden');
+  trash[i].classList.remove('hidden');
+};
+
+const hideTrash = (i) => {
+  const dragBTn = document.querySelectorAll('.material-symbols-outlined');
+  const trash = document.querySelectorAll('.fa-trash-can');
+  dragBTn[i].classList.remove('hidden');
+  trash[i].classList.add('hidden');
+};
+
+const removeTask = (dataBase, i) => {
+  dataBase.splice(i, 1);
+  localStorage.setItem('dataBase', JSON.stringify(dataBase));
+  if (true) {
+    window.location.reload();
+  }
+};
+
+const completibilty = (i) => {
+  const strike = document.querySelectorAll('label');
+  if (dataBase[i].check === false) {
+    dataBase[i].check = true;
+    strike[i].classList.add('strike');
+    localStorage.setItem('dataBase', JSON.stringify(dataBase));
+  } else if (dataBase[i].check === true) {
+    dataBase[i].check = false;
+    strike[i].classList.remove('strike');
+    localStorage.setItem('dataBase', JSON.stringify(dataBase));
+  }
+};
+
+const valueUpdate = (i) => {
+  const strike = document.querySelectorAll('label');
+  dataBase[i].task = strike[i].innerText;
+  localStorage.setItem('dataBase', JSON.stringify(dataBase));
+};
+
+const complexFunctionality = () => {
+  const editAble = document.querySelectorAll('.task-list');
+  const trash = document.querySelectorAll('.fa-trash-can');
+  const checkbox = document.querySelectorAll('.checkbox');
+  const strike = document.querySelectorAll('label');
+  for (let i = 0; i < editAble.length; i += 1) {
+    strike[i].addEventListener('input', () => valueUpdate(i));
+    checkbox[i].addEventListener('input', () => completibilty(i));
+    trash[i].addEventListener('click', () => removeTask(dataBase, i));
+    editAble[i].addEventListener('mouseout', () => hideTrash(i));
+    editAble[i].addEventListener('mouseover', () => showTrash(i));
+  }
+};
+
+
+/***/ }),
+
 /***/ "./src/local.js":
 /*!**********************!*\
   !*** ./src/local.js ***!
@@ -763,11 +839,12 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _status_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./status.js */ "./src/status.js");
+/* harmony import */ var _complex_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./complex.js */ "./src/complex.js");
+/* harmony import */ var _status_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./status.js */ "./src/status.js");
+
 
 
 const submitForm = __webpack_require__(/*! ./submit.js */ "./src/submit.js");
-// const remove = require('./remove.js');
 const dataBase = __webpack_require__(/*! ./local.js */ "./src/local.js");
 
  // eslint-disable-line
@@ -811,62 +888,17 @@ htmlGenerator();
 
 form.addEventListener('submit', submitForm);
 
-const editAble = document.querySelectorAll('.task-list');
-const dragBTn = document.querySelectorAll('.material-symbols-outlined');
-const trash = document.querySelectorAll('.fa-trash-can');
-const checkbox = document.querySelectorAll('.checkbox');
-const strike = document.querySelectorAll('label');
-const complexFunctionality = () => {
-  for (let i = 0; i < editAble.length; i += 1) {
-    editAble[i].addEventListener('mouseover', () => {
-      dragBTn[i].classList.add('hidden');
-      trash[i].classList.remove('hidden');
-    });
-
-    editAble[i].addEventListener('mouseout', () => {
-      dragBTn[i].classList.remove('hidden');
-      trash[i].classList.add('hidden');
-    });
-
-    // trash[i].addEventListener('click', remove);
-
-    trash[i].addEventListener('click', () => {
-      dataBase.splice(i, 1);
-      localStorage.setItem('dataBase', JSON.stringify(dataBase));
-      window.location.reload();
-    });
-
-    checkbox[i].addEventListener('input', () => {
-      if (dataBase[i].check === false) {
-        dataBase[i].check = true;
-        strike[i].classList.add('strike');
-        localStorage.setItem('dataBase', JSON.stringify(dataBase));
-      } else if (dataBase[i].check === true) {
-        dataBase[i].check = false;
-        strike[i].classList.remove('strike');
-        localStorage.setItem('dataBase', JSON.stringify(dataBase));
-      }
-    });
-
-    strike[i].addEventListener('input', () => {
-      dataBase[i].task = strike[i].innerText;
-      localStorage.setItem('dataBase', JSON.stringify(dataBase));
-    });
-  }
-};
-
-complexFunctionality();
+(0,_complex_js__WEBPACK_IMPORTED_MODULE_1__.complexFunctionality)();
 
 const clearBtn = document.getElementById('clearAll');
-clearBtn.addEventListener('click', _status_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+clearBtn.addEventListener('click', _status_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
 const refresh = document.querySelector('.fa-rotate');
 refresh.addEventListener('click', () => {
   window.location.reload();
 });
-// export default dataBase;
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle30b4722411350aa4ad2e.js.map
+//# sourceMappingURL=bundle79f2a6006d02db1ee034.js.map

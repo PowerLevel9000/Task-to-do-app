@@ -1,6 +1,5 @@
 const dataBase = require('./local.js');
 
-
 export const showTrash = (i) => {
   const dragBTn = document.querySelectorAll('.material-symbols-outlined');
   const trash = document.querySelectorAll('.fa-trash-can');
@@ -15,7 +14,7 @@ export const hideTrash = (i) => {
   trash[i].classList.add('hidden');
 };
 
-export const removeTask = (dataBase,i) => {
+export const removeTask = (dataBase, i) => {
   dataBase.splice(i, 1);
   localStorage.setItem('dataBase', JSON.stringify(dataBase));
   if (process.env.NODE_ENV !== 'test') {
@@ -50,9 +49,8 @@ export const complexFunctionality = () => {
   for (let i = 0; i < editAble.length; i += 1) {
     strike[i].addEventListener('input', () => valueUpdate(i));
     checkbox[i].addEventListener('input', () => completibilty(i));
-    trash[i].addEventListener('click', () => removeTask(dataBase,i));
+    trash[i].addEventListener('click', () => removeTask(dataBase, i));
     editAble[i].addEventListener('mouseout', () => hideTrash(i));
-    editAble[i].addEventListener('mouseover', () => showTrash(i))
+    editAble[i].addEventListener('mouseover', () => showTrash(i));
   }
-}
-
+};

@@ -1,6 +1,5 @@
 import './styles/main.scss';
-// const complexFunctionality = require('./complex')
-import { complexFunctionality } from './complex';
+import { complexFunctionality } from './complex.js';
 
 const submitForm = require('./submit.js');
 const dataBase = require('./local.js');
@@ -46,8 +45,7 @@ htmlGenerator();
 
 form.addEventListener('submit', submitForm);
 
-
-complexFunctionality()
+complexFunctionality();
 
 const clearBtn = document.getElementById('clearAll');
 clearBtn.addEventListener('click', clear);
@@ -55,5 +53,3 @@ const refresh = document.querySelector('.fa-rotate');
 refresh.addEventListener('click', () => {
   window.location.reload();
 });
-
-
