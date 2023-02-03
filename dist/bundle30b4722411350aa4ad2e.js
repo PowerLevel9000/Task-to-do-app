@@ -853,10 +853,9 @@ const complexFunctionality = () => {
       localStorage.setItem('dataBase', JSON.stringify(dataBase));
     });
   }
-}
+};
 
-complexFunctionality()
-
+complexFunctionality();
 
 const clearBtn = document.getElementById('clearAll');
 clearBtn.addEventListener('click', _status_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
@@ -870,4 +869,4 @@ refresh.addEventListener('click', () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle7d3b59341246501c095d.js.map
+//# sourceMappingURL=bundle30b4722411350aa4ad2e.js.map
