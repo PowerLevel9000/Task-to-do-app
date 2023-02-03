@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/PowerLevel9000/WebPack-practice#readme",
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
