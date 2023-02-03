@@ -1,4 +1,5 @@
 const { removeTask, valueUpdate, completibilty } = require('./complex.js');
+
 describe('remove task', () => {
   let dummyDataBase;
   beforeEach(() => {
@@ -20,6 +21,10 @@ describe('remove task', () => {
   it('remove one task:"lets say first one"', () => {
     removeTask(dummyDataBase, 0);
     expect(dummyDataBase).toEqual([{ check: false, task: 'stop Procrastination', id: 2 }, { check: false, task: 'stop Procrastination', id: 3 }]);
+  });
+  it('remove one task:"lets say third one"', () => {
+    removeTask(dummyDataBase, 2);
+    expect(dummyDataBase).toEqual([{ check: false, task: 'stop Procrastination', id: 1 }, { check: false, task: 'stop Procrastination', id: 2 }]);
   });
 });
 
