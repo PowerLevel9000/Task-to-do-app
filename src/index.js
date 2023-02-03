@@ -4,7 +4,7 @@ import { complexFunctionality } from './complex.js';
 const submitForm = require('./submit.js');
 const dataBase = require('./local.js');
 
-import clear from './status.js'; // eslint-disable-line
+const clear = require('./status.js');
 
 const form = document.getElementById('formId');
 
@@ -48,7 +48,7 @@ form.addEventListener('submit', submitForm);
 complexFunctionality();
 
 const clearBtn = document.getElementById('clearAll');
-clearBtn.addEventListener('click', clear);
+clearBtn.addEventListener('click', () => clear(dataBase));
 const refresh = document.querySelector('.fa-rotate');
 refresh.addEventListener('click', () => {
   window.location.reload();
