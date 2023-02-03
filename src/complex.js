@@ -35,7 +35,7 @@ export const completibilty = (i) => {
   }
 };
 
-export const valueUpdate = (i) => {
+export const valueUpdate = (dataBase, i) => {
   const strike = document.querySelectorAll('label');
   dataBase[i].task = strike[i].innerText;
   localStorage.setItem('dataBase', JSON.stringify(dataBase));
@@ -47,7 +47,7 @@ export const complexFunctionality = () => {
   const checkbox = document.querySelectorAll('.checkbox');
   const strike = document.querySelectorAll('label');
   for (let i = 0; i < editAble.length; i += 1) {
-    strike[i].addEventListener('input', () => valueUpdate(i));
+    strike[i].addEventListener('input', () => valueUpdate(dataBase, i));
     checkbox[i].addEventListener('input', () => completibilty(i));
     trash[i].addEventListener('click', () => removeTask(dataBase, i));
     editAble[i].addEventListener('mouseout', () => hideTrash(i));

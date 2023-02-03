@@ -1,4 +1,4 @@
-const { removeTask } = require('./complex.js');
+const { removeTask,valueUpdate } = require('./complex.js');
 
 describe('remove task', () => {
   let dummyDataBase;
@@ -23,3 +23,28 @@ describe('remove task', () => {
     expect(dummyDataBase).toEqual([{ check: false, task: 'stop Procrastination', id: 2 }, { check: false, task: 'stop Procrastination', id: 3 }]);
   });
 });
+
+describe('editing the value',()=>{
+  let dummyDataBase
+  beforeEach(()=>{
+    dummyDataBase = [
+      { check: false, task: 'stop Procrastination', id: 1 },
+      { check: false, task: 'stop Procrastination', id: 2 },
+      { check: false, task: 'stop Procrastination', id: 3 },
+    ];
+    document.body.innerHTML = `
+      <label class="list" contenteditable="true>i don't know</label>
+      <label class="list" contenteditable="true>i don't know</label>
+      <label class="list" contenteditable="true>i don't know</label>  
+    `
+  })
+
+  it('edit the first task',()=>{
+    valueUpdate(dummyDataBase, 0);
+    expect(dummyDataBase).toEqual([
+      { check: false, task: `i don't know`, id: 1 },
+      { check: false, task: 'stop Procrastination', id: 2 },
+      { check: false, task: 'stop Procrastination', id: 3 },
+    ]);
+  })
+})
