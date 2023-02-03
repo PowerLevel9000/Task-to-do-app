@@ -24,27 +24,49 @@ describe('remove task', () => {
   });
 });
 
-describe('editing the value',()=>{
-  let dummyDataBase
-  beforeEach(()=>{
+describe('editing the value', () => {
+  let dummyDataBase;
+  let strike;
+
+  beforeEach(() => {
     dummyDataBase = [
       { check: false, task: 'stop Procrastination', id: 1 },
       { check: false, task: 'stop Procrastination', id: 2 },
       { check: false, task: 'stop Procrastination', id: 3 },
     ];
-    document.body.innerHTML = `
-      <label class="list" contenteditable="true>i don't know</label>
-      <label class="list" contenteditable="true>i don't know</label>
-      <label class="list" contenteditable="true>i don't know</label>  
-    `
-  })
+    
+    // mocking strike as dom editing
+    strike = [
+      { innerText: `i don't know` },
+      { innerText: `i don't know` },
+      { innerText: `i don't know` },
+    ];
 
-  it('edit the first task',()=>{
+    document.querySelectorAll = jest.fn(() => strike);
+  });
+
+  it('edits the first task', () => {
     valueUpdate(dummyDataBase, 0);
     expect(dummyDataBase).toEqual([
       { check: false, task: `i don't know`, id: 1 },
       { check: false, task: 'stop Procrastination', id: 2 },
       { check: false, task: 'stop Procrastination', id: 3 },
     ]);
-  })
-})
+  });
+  it('edits the second task', () => {
+    valueUpdate(dummyDataBase, 1);
+    expect(dummyDataBase).toEqual([
+      { check: false, task: 'stop Procrastination', id: 1 },
+      { check: false, task: `i don't know`, id: 2 },
+      { check: false, task: 'stop Procrastination', id: 3 },
+    ]);
+  });
+  it('edits the first task', () => {
+    valueUpdate(dummyDataBase, 2);
+    expect(dummyDataBase).toEqual([
+      { check: false, task: 'stop Procrastination', id: 1 },
+      { check: false, task: 'stop Procrastination', id: 2 },
+      { check: false, task: `i don't know`, id: 3 },
+    ]);
+  });
+});
