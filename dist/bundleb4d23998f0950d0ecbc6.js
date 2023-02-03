@@ -651,20 +651,17 @@ const removeTask = (dataBase, i) => {
   }
 };
 
-const completibilty = (i) => {
-  const strike = document.querySelectorAll('label');
+const completibilty = (dataBase, i) => {
   if (dataBase[i].check === false) {
     dataBase[i].check = true;
-    strike[i].classList.add('strike');
     localStorage.setItem('dataBase', JSON.stringify(dataBase));
   } else if (dataBase[i].check === true) {
     dataBase[i].check = false;
-    strike[i].classList.remove('strike');
     localStorage.setItem('dataBase', JSON.stringify(dataBase));
   }
 };
 
-const valueUpdate = (i) => {
+const valueUpdate = (dataBase, i) => {
   const strike = document.querySelectorAll('label');
   dataBase[i].task = strike[i].innerText;
   localStorage.setItem('dataBase', JSON.stringify(dataBase));
@@ -676,8 +673,8 @@ const complexFunctionality = () => {
   const checkbox = document.querySelectorAll('.checkbox');
   const strike = document.querySelectorAll('label');
   for (let i = 0; i < editAble.length; i += 1) {
-    strike[i].addEventListener('input', () => valueUpdate(i));
-    checkbox[i].addEventListener('input', () => completibilty(i));
+    strike[i].addEventListener('input', () => valueUpdate(dataBase, i));
+    checkbox[i].addEventListener('input', () => completibilty(dataBase, i));
     trash[i].addEventListener('click', () => removeTask(dataBase, i));
     editAble[i].addEventListener('mouseout', () => hideTrash(i));
     editAble[i].addEventListener('mouseover', () => showTrash(i));
@@ -707,21 +704,16 @@ module.exports = dataBase;
 /*!***********************!*\
   !*** ./src/status.js ***!
   \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const dataBase = __webpack_require__(/*! ./local */ "./src/local.js")// eslint-disable-line
-
-const clear = () => {
-  const filteredBase = dataBase.filter((c) => c.check === false);
-  localStorage.setItem('dataBase', JSON.stringify(filteredBase));
-  window.location.reload();
+const clear = (dataBase) => {
+  dataBase = dataBase.filter((data) => data.check === false);
+  localStorage.setItem('dataBase', JSON.stringify(dataBase));
+  if (true) {
+    window.location.reload();
+  }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clear);
+module.exports = clear;
 
 /***/ }),
 
@@ -840,14 +832,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _complex_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./complex.js */ "./src/complex.js");
-/* harmony import */ var _status_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./status.js */ "./src/status.js");
 
 
 
 const submitForm = __webpack_require__(/*! ./submit.js */ "./src/submit.js");
 const dataBase = __webpack_require__(/*! ./local.js */ "./src/local.js");
 
- // eslint-disable-line
+const clear = __webpack_require__(/*! ./status.js */ "./src/status.js");
 
 const form = document.getElementById('formId');
 
@@ -891,7 +882,7 @@ form.addEventListener('submit', submitForm);
 (0,_complex_js__WEBPACK_IMPORTED_MODULE_1__.complexFunctionality)();
 
 const clearBtn = document.getElementById('clearAll');
-clearBtn.addEventListener('click', _status_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
+clearBtn.addEventListener('click', () => clear(dataBase));
 const refresh = document.querySelector('.fa-rotate');
 refresh.addEventListener('click', () => {
   window.location.reload();
@@ -901,4 +892,4 @@ refresh.addEventListener('click', () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle79f2a6006d02db1ee034.js.map
+//# sourceMappingURL=bundleb4d23998f0950d0ecbc6.js.map

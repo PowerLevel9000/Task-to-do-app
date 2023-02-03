@@ -1,8 +1,8 @@
-const dataBase = require('./local')// eslint-disable-line
-
-const clear = () => {
-  const filteredBase = dataBase.filter((c) => c.check === false);
-  localStorage.setItem('dataBase', JSON.stringify(filteredBase));
-  window.location.reload();
+const clear = (dataBase) => {
+  dataBase = dataBase.filter((data) => data.check === false);
+  localStorage.setItem('dataBase', JSON.stringify(dataBase));
+  if (process.env.NODE_ENV !== 'test') {
+    window.location.reload();
+  }
 };
-export default clear;
+module.exports = clear;

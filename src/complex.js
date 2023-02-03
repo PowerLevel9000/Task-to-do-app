@@ -22,15 +22,12 @@ export const removeTask = (dataBase, i) => {
   }
 };
 
-export const completibilty = (i) => {
-  const strike = document.querySelectorAll('label');
+export const completibilty = (dataBase, i) => {
   if (dataBase[i].check === false) {
     dataBase[i].check = true;
-    strike[i].classList.add('strike');
     localStorage.setItem('dataBase', JSON.stringify(dataBase));
   } else if (dataBase[i].check === true) {
     dataBase[i].check = false;
-    strike[i].classList.remove('strike');
     localStorage.setItem('dataBase', JSON.stringify(dataBase));
   }
 };
@@ -48,7 +45,7 @@ export const complexFunctionality = () => {
   const strike = document.querySelectorAll('label');
   for (let i = 0; i < editAble.length; i += 1) {
     strike[i].addEventListener('input', () => valueUpdate(dataBase, i));
-    checkbox[i].addEventListener('input', () => completibilty(i));
+    checkbox[i].addEventListener('input', () => completibilty(dataBase, i));
     trash[i].addEventListener('click', () => removeTask(dataBase, i));
     editAble[i].addEventListener('mouseout', () => hideTrash(i));
     editAble[i].addEventListener('mouseover', () => showTrash(i));
