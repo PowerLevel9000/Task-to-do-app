@@ -23,7 +23,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           'style-loader',
           'css-loader',
@@ -36,7 +36,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'To-Do-App',
       filename: 'index.html',
-      template: 'src/template.html',
+      template: 'src/index.html',
     }),
   ],
 };

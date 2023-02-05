@@ -45,6 +45,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "localstorage-memory": "^1.0.3"
+    "localstorage-memory": "^1.0.3",
+    "node-localstorage": "^2.2.1"
   }
 }

@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  width: 610px;
+  min-height: 100vh;
+  height: min-content;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#book-collection {
+  text-align: center;
+}
+
+h1 {
+  display: flex;
+  padding-left: 35px;
+  font-size: xx-large;
+  border: 2px solid black;
+}
+
+#list {
+    width: 45%;
+    height: 190px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid;
+    overflow-y: scroll;
+}
+
+.book {
+  width: 24rem;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 3px;
+}
+
+
+.book:nth-child(even) {
+  background-color: lightgray;
+}
+
+#add-form {
+  display: flex;
+  /* margin-top: -5rem; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+#add-button {
+  margin-left: 7rem;
+  border: 1px solid;
+}
+
+#add-form label {
+  margin-right: 10px;
+  border: 1px solid;
+}
+
+h2 {
+  font-size: smaller;
+}
+
+h3 {
+  font-size: smaller;
+}
+
+ #score-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 4.5rem;
+  gap: 3rem;
+ }
+
+ h4 {
+  font-size: x-large;
+}
+ 
+#forma {
+  display: flex;
+  flex-direction: column;
+  margin-top: -6.3rem;
+}
+
+#list-form-container {
+  display: flex;
+}
+
+h5 {
+  font-size: x-large;
+}
+
+h6 {
+  font-size: large;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#footer {
+  margin-top: auto;
+}
