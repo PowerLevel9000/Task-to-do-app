@@ -206,22 +206,6 @@ If you like my Project give it a Star ✨🌟
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> ask questions to be here 
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
