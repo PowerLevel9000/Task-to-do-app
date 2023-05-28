@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <!-- the change -->
 <div align="center">
-  <img src="./media/media/my-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./media/media/adarsh-logo.png" alt="logo" width="140"  height="auto" />
   <br/><br>
   <h1><b>To do App</b></h1>
 
@@ -34,23 +34,26 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Task-To-do <a name="about-project"></a>
 
-> This Project for individual purpose it organize someone's task to do
+This Project for individual purpose and  it organize someone's task to do
 
 **Task-To-do** is just a javascript based simple project
-This is website for tracking your daily task completed or not , you can add ,delete edit and mark complete you tasks once you have finished all you can delete comlted atonce 
+This is website for tracking your daily task completed or not , you can add ,delete edit and mark complete you tasks once you have finished all you can delete completed by clicking a single button
+
+## 🧪 Linters And Deployment <a name="linters"></a>
+[![Linters](https://github.com/PowerLevel9000/Task-to-do-app/actions/workflows/linters.yml/badge.svg)](https://github.com/PowerLevel9000/Task-to-do-app/actions/workflows/linters.yml)
+[![pages-build-deployment](https://github.com/PowerLevel9000/Task-to-do-app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/PowerLevel9000/Task-to-do-app/actions/workflows/pages/pages-build-deployment)
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> In this project I used many skills, tech and libraries
+In this project I used many skills, tech and libraries
 
 <details>
   <summary>Documentation</summary>
@@ -73,21 +76,16 @@ This is website for tracking your daily task completed or not , you can add ,del
   </ul>
 </details>
 
-<!-- <details> -->
-<!-- <summary>Animation</summary>
-  <ul>
-    <li><a href="https://michalsnik.github.io/aos/">Aos.js</a></li>
-  </ul>
-</details> -->
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Following features you should observe
 
-- **You can add your todays tasks**
-- **yoc can checked the completed tasks**
+- **add your todays tasks**
+- **Checked the completed tasks**
+- **Edit and Delete Task**
+- **Delete The Completed one**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -96,7 +94,7 @@ This is website for tracking your daily task completed or not , you can add ,del
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> This link will guide you to my project
+This link will guide you to my project
 
 - [Live Demo Link](https://powerlevel9000.github.io/Task-to-do-app/dist/)
 
@@ -107,9 +105,8 @@ This is website for tracking your daily task completed or not , you can add ,del
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
->For having local file and project you can fork this repo 
-
->And for making changes you you should follow prerequisites
+For having local file and project you can fork this repo or clone it using `git clone https://github.com/PowerLevel9000/Task-to-do-app.git`
+And for making changes you you should follow prerequisites
 
 
 ### Prerequisites
@@ -118,39 +115,52 @@ In order to edit this project you need:
 
  - Any text editor such as note pad and word pad
  - A web browser
+ - Node js installed
+ - An IDE
 
-#### suggested 
- - visual studio code
- - atom 
- - visual code 
+#### Suggested IDE
+ - Visual studio code `I prefer this one 🙃🙃`
+ - Atom 
+ - Sublime 
+ - IntelliJ IDEA
+ - Visual code 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
- - click on index.html
- - open in the browser
+- Open your terminal there (bash cmd powershell run etc...) and run `npm i` to install node modules
+- `npm run dev` or `npm run start` this will open project in browser
+- If you to edit something edit in src dir and then run in terminal `npm run build` to build it for production
 
+- Before deployment have some linter check 
+  - [ ] `npx stylelint "**/*.{css,scss}"` for css and saas file
+  - [ ] `npx eslint .` for js files
+  - [ ] `npx hint .` for html files 
 
+- After fixing error build deploy for production
+
+### Install 
+```
+npm i 
+```
 ### Usage
 
- Execute the following thing:
- 
- - See project buttons
- - Navigation bar on desktop version
-
+- For displaying task today
+- Delete, Edit task 
 
 ### Run tests
 
-- Check whether your fav book added 
-- Check your mood swings works 🧑‍🏫😁 according to my project
- 
+- Currently, this Project don't have any Unit test
+- You can do manual checking
+  - Score added properly
+  - Form validation for score and scorer work properly 
 
 ### Deployment
 
 You can deploy this project using:
 
-- for this repo and use git hub pages to deploy it 
+- For this repo and use git hub pages to deploy it 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,7 +181,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **Add navigation bar**
 - [ ] **improve functionality**
@@ -185,7 +194,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/PowerLevel9000/Task-to-do-app/issues)).
+Feel free to check the [issues page](https://github.com/PowerLevel9000/Task-to-do-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,10 +210,11 @@ If you like my Project give it a Star ✨🌟
 
 <!-- ACKNOWLEDGEMENTS -->
 
-<!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I want to thank microverse for giving this opportunity to show up my skills
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
