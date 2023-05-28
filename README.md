@@ -18,6 +18,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  -[🧪 Linters And Deployment](#linters)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
